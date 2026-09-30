@@ -1,0 +1,19 @@
+{
+  "type": "module",
+  "name": "apirestful",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js --ignore productos.json"
+  },
+  "keywords": [],
+  "author": "DS",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1"
+  }
+}

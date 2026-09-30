@@ -1,0 +1,20 @@
+[
+	{
+		"nombre": "Monitor5",
+		"precio": 3210,
+		"stock": 98,
+		"id": "3"
+	},
+	{
+		"nombre": "Monitor6",
+		"precio": 333,
+		"stock": 16,
+		"id": "4"
+	},
+	{
+		"nombre": "Monitor7",
+		"precio": 111,
+		"stock": 77,
+		"id": "5"
+	}
+]
