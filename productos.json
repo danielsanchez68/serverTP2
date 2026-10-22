@@ -12,9 +12,39 @@
 		"id": "4"
 	},
 	{
-		"nombre": "Monitor7",
-		"precio": 111,
-		"stock": 77,
+		"nombre": "DDR",
+		"precio": 3456,
+		"stock": 99,
 		"id": "5"
+	},
+	{
+		"nombre": "CPU",
+		"precio": 4455,
+		"stock": 123,
+		"id": "6"
+	},
+	{
+		"nombre": "Mouse",
+		"precio": 1122,
+		"stock": 33,
+		"id": "7"
+	},
+	{
+		"nombre": "Mouse2",
+		"precio": 2244,
+		"stock": 11,
+		"id": "8"
+	},
+	{
+		"nombre": "Teclado",
+		"precio": 10000,
+		"stock": 111,
+		"id": "9"
+	},
+	{
+		"nombre": "Teclado2",
+		"precio": 10000,
+		"stock": 111,
+		"id": "10"
 	}
 ]

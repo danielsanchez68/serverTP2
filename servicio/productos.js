@@ -1,6 +1,6 @@
 //import ModeloMem from '../modelo/DAO/productosMem.js'
 //import ModeloFile from '../modelo/DAO/productosFile.js'
-import ModelFactory from '../modelo/DAO/productosFactory.js'
+import ModelFactory from '../modelo/DAO/productos/productosFactory.js'
 
 import Producto from '../modelo/Producto.js'
 
@@ -30,11 +30,11 @@ class Servicio {
     guardarProducto = async producto => {
         //const productoModelo = new Producto(producto.nombre, producto.precio, producto.stock)   // 1
         const productoModelo = new Producto(producto)   // 2
-        console.log(productoModelo)
+        //console.log(productoModelo)
         
-        if(!productoModelo.validar()) return {}
+        productoModelo.validar()
 
-        const productoGuardado = await this.#modelo.guardarProducto(productoModelo)
+        const productoGuardado = await this.#modelo.guardarProducto(productoModelo.get())
         return productoGuardado
     }
 
@@ -46,6 +46,16 @@ class Servicio {
     borrarProducto = async id => {
         const productoEliminado = await this.#modelo.borrarProducto(id)
         return productoEliminado
+    }
+
+    calcularPromedio = async () => {
+        const productos = await this.#modelo.obtenerProductos()
+        const cant = productos.length
+        if(cant == 0) throw new Error('El divisor es Cero')
+
+        const sumatoria = productos.reduce((acc, producto) => acc + producto.precio, 0)
+        const promedio = sumatoria / cant
+        return +promedio.toFixed(2)
     }
 }
 

@@ -17,6 +17,8 @@ class Router {
         router.put('/:id', this.#controlador.actualizarProducto)
         router.delete('/:id', this.#controlador.borrarProducto)
 
+        router.get('/stat/promedio', this.#controlador.calcularPromedio)
+
         return router
     }
 }
