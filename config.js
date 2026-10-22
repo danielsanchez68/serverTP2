@@ -4,7 +4,7 @@ dotenv.config({quiet: true})
 
 //console.log('process.env', process.env)
 
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 const MODO_PERSISTENCIA = process.env.MODO_PERSISTENCIA || ''
 const STRCNX = process.env.STRCNX || 'mongodb://localhost:27017'
 const BASE = process.env.BASE || 'test'
